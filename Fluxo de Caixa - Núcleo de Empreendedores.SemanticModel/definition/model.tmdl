@@ -1,0 +1,42 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["f_Pagar","f_Receber","f_Pagamentos","f_Recebimentos","d_Calendario","f_Balancete_Geral","f_Agregados_Gerais","Medidas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table f_Pagar
+ref table DateTableTemplate_f291e516-d7a8-4925-bd49-831ebe629517
+ref table LocalDateTable_2b2de6cb-fe07-4e20-baf7-24a5779fe98d
+ref table LocalDateTable_b1c0de12-2d06-4690-92bb-c0b3ef20eb61
+ref table f_Receber
+ref table LocalDateTable_bbaac488-550a-4d55-9680-3d78eccd1512
+ref table LocalDateTable_f5d1bc20-2f42-4379-bf7f-40e28e8c53ff
+ref table f_Pagamentos
+ref table LocalDateTable_13b748b0-b864-48bc-8217-011cd3b83fbc
+ref table LocalDateTable_20eebcc1-26cf-41e7-a3f7-45d73fc9bb73
+ref table f_Recebimentos
+ref table LocalDateTable_2ce1f5f2-7b5b-4504-a3f1-c4a34bab2bf5
+ref table LocalDateTable_c19dd5a0-ab78-4da4-944d-c480e39c264b
+ref table d_Calendario
+ref table LocalDateTable_281d58aa-2645-45b8-8d80-56f153c98f86
+ref table LocalDateTable_4a52563f-831f-4199-a48e-5ef066a7c02b
+ref table LocalDateTable_6344d8b4-c827-4897-86af-f9465d58c798
+ref table Medidas
+ref table f_Balancete_Geral
+ref table LocalDateTable_5b055689-9100-47c3-8d48-ef1b5cdf0f0b
+ref table LocalDateTable_25d94c43-8e0f-40c9-9aab-75f558b4f682
+ref table f_Agregados_Gerais
+ref table 'aux_Atraso de Receita'
+ref table 'aux_Risco Inadimplência'
+ref table 'aux_Aumento despesas'
+
+ref cultureInfo pt-BR
+

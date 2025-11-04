@@ -1,0 +1,36 @@
+table f_Agregados_Gerais
+	lineageTag: 2ac89750-93bd-47be-b8d1-78036a72736c
+
+	column Tipo
+		dataType: string
+		lineageTag: 73479578-63b1-4e4b-a44b-b127765a583e
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 11ae79dd-734f-4128-9fb3-9f8d0b6cb899
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition f_Agregados_Gerais = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vTdqAtjXNUMbgEPUY6QBQK3K84t7lsQWobL6OBKyCEKIyoJIRXYbHkgYGlfiptzStMKlSQ8JnePohwJ/pub?output=xlsx"), null, true),
+				    Agregados_Gerais_Table = Fonte{[Item="Agregados_Gerais",Kind="Table"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Agregados_Gerais_Table,{{"Valor", Currency.Type}, {"Tipo", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

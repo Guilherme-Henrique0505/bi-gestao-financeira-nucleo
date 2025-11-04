@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Fluxo de Caixa - Núcleo de Empreendedores"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7f13e3b8-a7f1-4155-a124-e8520a4e6fa6"
+  }
+}

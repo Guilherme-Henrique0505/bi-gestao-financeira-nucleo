@@ -1,0 +1,26 @@
+table 'aux_Atraso de Receita'
+	lineageTag: 844ccc55-ba5f-4f66-a194-bd42f5673208
+
+	measure 'Atraso de Receita dias' = SELECTEDVALUE('aux_Atraso de Receita'[aux_Atraso de Receita], 5)
+		formatString: 0
+		lineageTag: 6d392578-951b-421e-8e03-555caba8167d
+
+	column 'aux_Atraso de Receita'
+		formatString: 0
+		lineageTag: a9242282-0ebf-4058-92db-851b9f951302
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'aux_Atraso de Receita' = calculated
+		mode: import
+		source = GENERATESERIES(0, 30, 1)
+
+	annotation PBI_Id = e634b7b47d66400ea1ed27764e4e7b10
+

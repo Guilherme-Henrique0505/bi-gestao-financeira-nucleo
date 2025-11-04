@@ -1,0 +1,28 @@
+table 'aux_Risco Inadimplência'
+	lineageTag: 0738d0a7-ec27-4abb-b074-ef30523bd261
+
+	measure 'Risco Inadimplência %' = SELECTEDVALUE('aux_Risco Inadimplência'[Risco Inadimplência (%)])
+		lineageTag: ef0c125c-c104-4ae7-aa94-bf4fc349a4b2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Risco Inadimplência (%)'
+		lineageTag: d0f5908f-65e3-4a3d-8109-41a8bc131549
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'aux_Risco Inadimplência' = calculated
+		mode: import
+		source = GENERATESERIES(0, 1, 0.01)
+
+	annotation PBI_Id = 37f0cfe3ea094db3bb8f03b07a4f1069
+

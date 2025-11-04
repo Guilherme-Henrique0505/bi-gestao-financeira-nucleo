@@ -1,0 +1,28 @@
+table 'aux_Aumento despesas'
+	lineageTag: 6caac5ca-2b73-4a66-8a40-5b13705befa8
+
+	measure 'Valor aux_Aumento despesas' = SELECTEDVALUE('aux_Aumento despesas'[aux_Aumento despesas])
+		lineageTag: 95a3ff16-cd6b-41ff-b910-770da5db4428
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'aux_Aumento despesas'
+		lineageTag: 94a96216-3d7d-45d2-888d-dd0549bef785
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'aux_Aumento despesas' = calculated
+		mode: import
+		source = GENERATESERIES(0, 0.2, 0.01)
+
+	annotation PBI_Id = 4a1023eba26c4b5e993f9a080d90e24c
+

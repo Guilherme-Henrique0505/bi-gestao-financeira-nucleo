@@ -1,0 +1,176 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 770.95404342188385,
+            "y": 959.17082968250509
+          },
+          "nodeIndex": "d_Calendario",
+          "nodeLineageTag": "7df882a0-0095-4023-8262-3ff649e9ce51",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 121.21791458540869,
+            "y": 760.21494750911575
+          },
+          "nodeIndex": "f_Pagamentos",
+          "nodeLineageTag": "9d535d64-919b-4193-8156-78d8aab2879d",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 393.91360309828434,
+            "y": 755.6932229142659
+          },
+          "nodeIndex": "f_Pagar",
+          "nodeLineageTag": "d14b2196-4ac8-4cb0-b652-940daf5a958a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 6,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 655.30498012403541,
+            "y": 755.6932229142659
+          },
+          "nodeIndex": "f_Receber",
+          "nodeLineageTag": "58c24db1-0ec2-4781-9dc4-3df4dfb4383b",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 914.43549485236167,
+            "y": 755.6932229142659
+          },
+          "nodeIndex": "f_Recebimentos",
+          "nodeLineageTag": "a97e9cbc-8f82-4a96-ad07-6eb20b98b1ef",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1494.608455815021,
+            "y": 672.82423912027582
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "507e824b-2b5d-416d-bb7f-70f1ce896f3a",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 5,
+          "expandedHeight": 104
+        },
+        {
+          "location": {
+            "x": 734.95872388026169,
+            "y": 412.04215370568426
+          },
+          "nodeIndex": "f_Agregados_Gerais",
+          "nodeLineageTag": "2ac89750-93bd-47be-b8d1-78036a72736c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 8,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1172.6973601051532,
+            "y": 757.95408521169077
+          },
+          "nodeIndex": "f_Balancete_Geral",
+          "nodeLineageTag": "6d759c62-2ac2-4221-a0e1-1848abcbebd7",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 7,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1496.0006686369109,
+            "y": 593.21544898679917
+          },
+          "nodeIndex": "aux_Atraso de Receita",
+          "nodeLineageTag": "844ccc55-ba5f-4f66-a194-bd42f5673208",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 224
+        },
+        {
+          "location": {
+            "x": 1493.7398063394862,
+            "y": 516.34613087435321
+          },
+          "nodeIndex": "aux_Risco Inadimplência",
+          "nodeLineageTag": "0738d0a7-ec27-4abb-b074-ef30523bd261",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 224
+        },
+        {
+          "location": {
+            "x": 1493.7398063394862,
+            "y": 438.34638161319481
+          },
+          "nodeIndex": "aux_Aumento despesas",
+          "nodeLineageTag": "6caac5ca-2b73-4a66-8a40-5b13705befa8",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 224
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 44.230911415480691,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

@@ -1,0 +1,134 @@
+table f_Recebimentos
+	lineageTag: a97e9cbc-8f82-4a96-ad07-6eb20b98b1ef
+
+	column Feito?
+		dataType: string
+		lineageTag: 19e302ca-5bcb-4389-909e-fe6b66ffdb26
+		summarizeBy: none
+		sourceColumn: Feito?
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Agendada'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: df1bf637-a4a1-457f-8e14-33e574ee4f8a
+		summarizeBy: none
+		sourceColumn: Data Agendada
+
+		variation Variation
+			isDefault
+			relationship: 2113f0c8-0f5f-4b2b-9dda-4a5646c5f87b
+			defaultHierarchy: LocalDateTable_2ce1f5f2-7b5b-4504-a3f1-c4a34bab2bf5.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data Pagamento/Recebimento'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2d75ca17-13d6-4d2a-8e13-e44772182d76
+		summarizeBy: none
+		sourceColumn: Data Pagamento/Recebimento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data de Lançamento'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7c9a853f-2a7d-4f0c-918f-7f26bb7430e4
+		summarizeBy: none
+		sourceColumn: Data de Lançamento
+
+		variation Variation
+			isDefault
+			relationship: 0f0ec39a-5a23-4c7d-8e48-3345a5d34201
+			defaultHierarchy: LocalDateTable_c19dd5a0-ab78-4da4-944d-c480e39c264b.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Valor Total'
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 003a007c-3dc8-42e8-a946-d4d6b78c07e5
+		summarizeBy: sum
+		sourceColumn: Valor Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column 'Valor Pago'
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: e3a93853-5590-438b-8ab5-cef9fe0e8b01
+		summarizeBy: sum
+		sourceColumn: Valor Pago
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column 'Valor em Aberto'
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 49af42bf-735d-4e54-8660-34905e487624
+		summarizeBy: sum
+		sourceColumn: Valor em Aberto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column Stakeholder
+		dataType: string
+		lineageTag: 69e44b06-994a-4735-b596-bb971096dfba
+		summarizeBy: none
+		sourceColumn: Stakeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: ed93dc6b-647a-4646-8f03-2ea674d76e72
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: da304b79-6ce7-4650-a7b6-24f93a7388d3
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: string
+		lineageTag: 4cdbc139-c215-4787-8826-daf48e3be826
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition f_Recebimentos = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vTdqAtjXNUMbgEPUY6QBQK3K84t7lsQWobL6OBKyCEKIyoJIRXYbHkgYGlfiptzStMKlSQ8JnePohwJ/pub?output=xlsx"), null, true),
+				    Recebimentos_Table = Fonte{[Item="Recebimentos",Kind="Table"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Recebimentos_Table,{{"Data Agendada", type date}, {"Data Pagamento/Recebimento", type date}, {"Data de Lançamento", type date}, {"Valor Total", Currency.Type}, {"Valor Pago", Currency.Type}, {"Valor em Aberto", Currency.Type}, {"Stakeholder", type text}, {"Categoria", type text}, {"Descrição", type text}}),
+				    Personalizar1 = Table.AddColumn(#"Tipo Alterado", "Tipo", each "Entradas")
+				in
+				    Personalizar1
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

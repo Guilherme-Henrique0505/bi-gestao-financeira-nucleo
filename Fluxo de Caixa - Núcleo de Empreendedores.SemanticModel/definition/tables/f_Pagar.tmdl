@@ -1,0 +1,125 @@
+table f_Pagar
+	lineageTag: d14b2196-4ac8-4cb0-b652-940daf5a958a
+
+	column Feito?
+		dataType: string
+		lineageTag: 5ac32cea-1861-4eea-af0e-bd6ec76b9f72
+		summarizeBy: none
+		sourceColumn: Feito?
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Agendada'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f7f30a2f-6bdf-4486-9ceb-34cdb9d61ed4
+		summarizeBy: none
+		sourceColumn: Data Agendada
+
+		variation Variation
+			isDefault
+			relationship: 60d1ac51-311b-4a75-a362-c08f38f28b05
+			defaultHierarchy: LocalDateTable_2b2de6cb-fe07-4e20-baf7-24a5779fe98d.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data Pagamento/Recebimento'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3f3c257b-76f0-4400-bfeb-61972f6b6d2d
+		summarizeBy: none
+		sourceColumn: Data Pagamento/Recebimento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data de Lançamento'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fe04ff4c-1c83-432a-8812-8a3837dda882
+		summarizeBy: none
+		sourceColumn: Data de Lançamento
+
+		variation Variation
+			isDefault
+			relationship: 9bca4b7d-68f0-43eb-ab55-178cb7488acf
+			defaultHierarchy: LocalDateTable_b1c0de12-2d06-4690-92bb-c0b3ef20eb61.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Valor Total'
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 2d894dd5-a73d-403e-bab8-76b0dd08644c
+		summarizeBy: sum
+		sourceColumn: Valor Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column 'Valor Pago'
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 531beb45-dcff-4e1b-95b6-a590b05811d1
+		summarizeBy: sum
+		sourceColumn: Valor Pago
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column 'Valor em Aberto'
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 91ecdc02-e7a3-45ff-9ba8-0df57927c811
+		summarizeBy: sum
+		sourceColumn: Valor em Aberto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column Stakeholder
+		dataType: string
+		lineageTag: f5e16a91-81c9-4b63-9f67-5b9bc6af8b83
+		summarizeBy: none
+		sourceColumn: Stakeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: d62532cf-2cbf-4084-9282-e56e6d7c7f08
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: a2cd3efd-f8cd-4ce8-afc4-cbbd1818bf31
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	partition f_Pagar = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://docs.google.com/spreadsheets/d/e/2PACX-1vTdqAtjXNUMbgEPUY6QBQK3K84t7lsQWobL6OBKyCEKIyoJIRXYbHkgYGlfiptzStMKlSQ8JnePohwJ/pub?output=xlsx"), null, true),
+				    A_Pagar_Table = Fonte{[Item="A_Pagar",Kind="Table"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(A_Pagar_Table,{{"Data Agendada", type date}, {"Data Pagamento/Recebimento", type date}, {"Data de Lançamento", type date}, {"Valor Total", Currency.Type}, {"Valor Pago", Currency.Type}, {"Valor em Aberto", Currency.Type}, {"Stakeholder", type text}, {"Categoria", type text}, {"Descrição", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
