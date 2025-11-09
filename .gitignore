@@ -1,2 +1,16 @@
-**/.pbi/localSettings.json
-**/.pbi/cache.abf
+# Arquivos de Cache e Temporários
+.pbi/localSettings.json
+.pbi/cache.abf
+.pbi/qpcache
+.pbi/temp
+
+# Arquivos de Dados e Binários
+dataset/local.json
+dataset/pbi.xml
+dataset/database.json
+
+# Arquivos de Segurança
+dataset/security.json
+
+# O arquivo .pbix original
+*.pbix
