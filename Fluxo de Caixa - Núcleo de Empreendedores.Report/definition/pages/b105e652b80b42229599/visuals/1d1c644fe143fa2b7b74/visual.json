@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "cbef6b17536cd115bb9f",
+  "name": "1d1c644fe143fa2b7b74",
   "position": {
-    "x": 340.2162586726011,
-    "y": 104.96033512239822,
-    "z": 6000,
-    "height": 142.96321508050792,
-    "width": 352.88388532530433,
-    "tabOrder": 6000
+    "x": 854.15996858227516,
+    "y": 255.16219400445084,
+    "z": 9000,
+    "height": 50.670506610812936,
+    "width": 52.48016756119911,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "crd_Total a receber em Aberto"
+                  "Property": "icn_Money"
                 }
               },
-              "queryRef": "Medidas.crd_Total a receber em Aberto",
-              "nativeQueryRef": "crd_Total a receber em Aberto"
+              "queryRef": "Medidas.icn_Money",
+              "nativeQueryRef": "icn_Money"
             }
           ]
         }
