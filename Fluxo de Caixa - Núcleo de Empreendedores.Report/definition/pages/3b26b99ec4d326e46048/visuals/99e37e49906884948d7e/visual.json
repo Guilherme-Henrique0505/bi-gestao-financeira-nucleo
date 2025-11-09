@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "99e37e49906884948d7e",
   "position": {
-    "x": 12.839742058753284,
-    "y": 786.89276331502276,
+    "x": 12.667626652703234,
+    "y": 754.62861631103544,
     "z": 1000,
-    "height": 276.97157869596373,
-    "width": 1379.35514688321,
-    "tabOrder": 6000
+    "height": 276.878125409085,
+    "width": 1310.1945280795917,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "areaChart",
@@ -123,6 +123,21 @@
               "expr": {
                 "Literal": {
                   "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

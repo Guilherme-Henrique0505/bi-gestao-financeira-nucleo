@@ -7,7 +7,7 @@
     "z": 11000,
     "height": 51.358968235013137,
     "width": 251.29209457845712,
-    "tabOrder": 10000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "card",
@@ -51,6 +51,21 @@
         }
       ],
       "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
         {
           "properties": {
             "show": {

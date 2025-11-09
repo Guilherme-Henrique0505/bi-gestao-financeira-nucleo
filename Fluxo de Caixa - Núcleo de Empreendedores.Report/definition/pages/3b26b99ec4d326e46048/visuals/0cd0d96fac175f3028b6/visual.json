@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "0cd0d96fac175f3028b6",
   "position": {
-    "x": 1406.8688798662527,
-    "y": 614.47336995462149,
+    "x": 1339.1491032857705,
+    "y": 562.80455557010077,
     "z": 7000,
-    "height": 449.39097205636494,
-    "width": 513.5896823501314,
-    "tabOrder": 4000
+    "height": 448.79591569577173,
+    "width": 557.37557271894229,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "barChart",
@@ -69,6 +69,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

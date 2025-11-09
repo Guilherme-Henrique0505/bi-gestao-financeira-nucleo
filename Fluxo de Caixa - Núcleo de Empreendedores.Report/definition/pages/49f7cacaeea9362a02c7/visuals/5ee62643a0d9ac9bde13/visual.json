@@ -7,7 +7,7 @@
     "z": 10000,
     "height": 51.358968235013137,
     "width": 155.91115357057561,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -99,7 +99,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

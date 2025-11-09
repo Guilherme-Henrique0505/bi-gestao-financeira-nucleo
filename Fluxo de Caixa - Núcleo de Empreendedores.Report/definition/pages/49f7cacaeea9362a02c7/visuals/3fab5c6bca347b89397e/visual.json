@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "3fab5c6bca347b89397e",
   "position": {
-    "x": 1530.9591257165021,
-    "y": 337.5968585801287,
+    "x": 1536.4021468778635,
+    "y": 338.40659772221494,
     "z": 5000,
-    "height": 80.706950083592076,
-    "width": 286.14282302364461,
-    "tabOrder": 8000
+    "height": 79.625081816991752,
+    "width": 285.92643016101584,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -64,7 +64,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "r",
+                    "Name": "a",
                     "Entity": "aux_Risco Inadimplência",
                     "Type": 0
                   }
@@ -78,7 +78,7 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "r"
+                                "Source": "a"
                               }
                             },
                             "Property": "Risco Inadimplência (%)"
@@ -170,7 +170,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

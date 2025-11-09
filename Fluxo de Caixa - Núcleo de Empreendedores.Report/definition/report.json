@@ -57,6 +57,37 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "BI_Gest_o_Financeira_-_Home08880620243689097.png",
+          "path": "BI_Gest_o_Financeira_-_Home08880620243689097.png",
+          "type": "Image"
+        },
+        {
+          "name": "BI_Gest_o_Financeira_-_Disponi5565654970254843.png",
+          "path": "BI_Gest_o_Financeira_-_Disponi5565654970254843.png",
+          "type": "Image"
+        },
+        {
+          "name": "BI_Gest_o_Financeira_-_Entrada6165820086072605.png",
+          "path": "BI_Gest_o_Financeira_-_Entrada6165820086072605.png",
+          "type": "Image"
+        },
+        {
+          "name": "BI_Gest_o_Financeira_-_Sa_das_14987219740760893.png",
+          "path": "BI_Gest_o_Financeira_-_Sa_das_14987219740760893.png",
+          "type": "Image"
+        },
+        {
+          "name": "BI_Gest_o_Financeira_-_Gest_o_9865478354959498.png",
+          "path": "BI_Gest_o_Financeira_-_Gest_o_9865478354959498.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

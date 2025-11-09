@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "3b26b99ec4d326e46048",
-  "displayName": "Disponibilidade Atual",
+  "displayName": "Disponibilidade Imediata",
   "displayOption": "FitToPage",
   "height": 1080,
   "width": 1920,
@@ -10,5 +10,47 @@
     "type": "Default",
     "parameters": [],
     "referenceScope": "CrossReport"
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'BI Gestão Financeira - Disponibilidade Imediata.png'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "BI_Gest_o_Financeira_-_Disponi5565654970254843.png"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fit'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
   }
 }
