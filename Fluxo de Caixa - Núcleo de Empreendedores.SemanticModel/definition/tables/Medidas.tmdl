@@ -208,12 +208,12 @@ table Medidas
 			RETURN
 			    IF(
 			        ISBLANK(DataQuebra),
-			        "CAIXA SAUDÁVEL (Risco Controlado)", // Se não houver data, está seguro.
+			        "Caixa Saudável ✅", // Se não houver data, está seguro.
 			        
 			        // Se houver data:
-			        "PREJUÍZO em " & 
+			        "Prejuízo em " & 
 			        FORMAT(DiasParaQuebra, "#") & 
-			        " dias (Risco Alto)"
+			        " dias  ⚠️"
 			    )
 			```
 		displayFolder: 1. INDICADORES\1.4 Gestão de Riscos\1.4.1 Atraso de receita
@@ -289,12 +289,12 @@ table Medidas
 			RETURN
 			    IF(
 			        ISBLANK(DataQuebra),
-			        "CAIXA SAUDÁVEL (Risco Controlado)", // Se não houver data, está seguro.
+			        "Caixa Saudável ✅", // Se não houver data, está seguro.
 			        
 			        // Se houver data:
-			        "PREJUÍZO em " & 
+			        "Prejuízo em " & 
 			        FORMAT(DiasParaQuebra, "#") & 
-			        " dias (Risco Alto)"
+			        " dias  ⚠️"
 			    )
 			```
 		displayFolder: 1. INDICADORES\1.4 Gestão de Riscos\1.4.2 Inadimplência
@@ -330,12 +330,12 @@ table Medidas
 			RETURN
 			    IF(
 			        ISBLANK(DataQuebra),
-			        "CAIXA SAUDÁVEL (Risco Controlado)", // Se não houver data, está seguro.
+			        "Caixa Saudável ✅", // Se não houver data, está seguro.
 			        
 			        // Se houver data:
-			        "PREJUÍZO em " & 
+			        "Prejuízo em " & 
 			        FORMAT(DiasParaQuebra, "#") & 
-			        " dias (Risco Alto)"
+			        " dias  ⚠️"
 			    )
 			```
 		displayFolder: 1. INDICADORES\1.4 Gestão de Riscos\1.4.3 Aumento de despesas
@@ -371,12 +371,12 @@ table Medidas
 			RETURN
 			    IF(
 			        ISBLANK(DataQuebra),
-			        "CAIXA SAUDÁVEL (Risco Controlado)", // Se não houver data, está seguro.
+			        "Caixa Saudável ✅", // Se não houver data, está seguro.
 			        
 			        // Se houver data:
-			        "PREJUÍZO em " & 
+			        "Prejuízo em " & 
 			        FORMAT(DiasParaQuebra, "#") & 
-			        " dias (Risco Alto)"
+			        " dias  ⚠️"
 			    )
 			```
 		displayFolder: 1. INDICADORES\1.4 Gestão de Riscos\1.4.4 Movimentação sob Riscos
@@ -1292,7 +1292,7 @@ table Medidas
 			</html>"
 			
 			```
-		displayFolder: 2. VISUAL\2.1 Tela 1
+		displayFolder: 2. VISUAL\2.1 Tela 1\2.1.2 Icons
 		lineageTag: b02c6b89-b68b-42dd-a9de-df56fd07549c
 
 	measure icn_Money = ```
@@ -1332,7 +1332,7 @@ table Medidas
 			</html>"
 			
 			```
-		displayFolder: 2. VISUAL\2.1 Tela 1
+		displayFolder: 2. VISUAL\2.1 Tela 1\2.1.2 Icons
 		lineageTag: c7518cad-9ffc-4383-b1f9-e528267424ce
 
 	measure icn_Cliente = ```
@@ -1371,7 +1371,7 @@ table Medidas
 			</html>"
 			
 			```
-		displayFolder: 2. VISUAL\2.2 Tela 2
+		displayFolder: 2. VISUAL\2.2 Tela 2\2.2.2 Icons
 		lineageTag: f5d172ca-cafb-4803-9f7c-2c488ca728e1
 
 	measure icn_EntradasxSaidas = ```
@@ -1410,7 +1410,7 @@ table Medidas
 			</html>"
 			
 			```
-		displayFolder: 2. VISUAL\2.1 Tela 1
+		displayFolder: 2. VISUAL\2.1 Tela 1\2.1.2 Icons
 		lineageTag: 2080c29f-93ce-4451-8c07-b88f8244f014
 
 	measure icn_Atraso = ```
@@ -1449,7 +1449,7 @@ table Medidas
 			</html>"
 			
 			```
-		displayFolder: 2. VISUAL
+		displayFolder: 2. VISUAL\2.3 Tela 3\2.3.2 Icons
 		lineageTag: 1b55e074-1647-4948-b060-ffedad43c6f4
 
 	measure icn_Inadimplencia = ```
@@ -1489,7 +1489,7 @@ table Medidas
 			</html>"
 			
 			```
-		displayFolder: 2. VISUAL
+		displayFolder: 2. VISUAL\2.3 Tela 3\2.3.2 Icons
 		lineageTag: 85c481ea-ee73-4d46-9dea-b43a54219404
 
 	column Medidas
