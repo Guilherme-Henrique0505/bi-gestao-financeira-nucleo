@@ -9,6 +9,15 @@
         "page": "1.3.100"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Custom8358396385940637.json",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -68,23 +77,28 @@
           "type": "Image"
         },
         {
-          "name": "BI_Gest_o_Financeira_-_Disponi5565654970254843.png",
-          "path": "BI_Gest_o_Financeira_-_Disponi5565654970254843.png",
+          "name": "Custom8358396385940637.json",
+          "path": "Custom8358396385940637.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "BI_Gest_o_Financeira_-_Disponi7591218675635867.png",
+          "path": "BI_Gest_o_Financeira_-_Disponi7591218675635867.png",
           "type": "Image"
         },
         {
-          "name": "BI_Gest_o_Financeira_-_Entrada6165820086072605.png",
-          "path": "BI_Gest_o_Financeira_-_Entrada6165820086072605.png",
+          "name": "BI_Gest_o_Financeira_-_Entrada1009702229163918.png",
+          "path": "BI_Gest_o_Financeira_-_Entrada1009702229163918.png",
           "type": "Image"
         },
         {
-          "name": "BI_Gest_o_Financeira_-_Sa_das_14987219740760893.png",
-          "path": "BI_Gest_o_Financeira_-_Sa_das_14987219740760893.png",
+          "name": "BI_Gest_o_Financeira_-_Sa_das_9522446399825436.png",
+          "path": "BI_Gest_o_Financeira_-_Sa_das_9522446399825436.png",
           "type": "Image"
         },
         {
-          "name": "BI_Gest_o_Financeira_-_Gest_o_9865478354959498.png",
-          "path": "BI_Gest_o_Financeira_-_Gest_o_9865478354959498.png",
+          "name": "BI_Gest_o_Financeira_-_Gest_o_3405902252384626.png",
+          "path": "BI_Gest_o_Financeira_-_Gest_o_3405902252384626.png",
           "type": "Image"
         }
       ]
