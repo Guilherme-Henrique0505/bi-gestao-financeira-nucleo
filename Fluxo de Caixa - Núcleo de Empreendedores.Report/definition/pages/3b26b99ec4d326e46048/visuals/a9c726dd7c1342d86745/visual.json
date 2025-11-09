@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "ad59bb0f0c28909833d5",
+  "name": "a9c726dd7c1342d86745",
   "position": {
-    "x": 993.50386176201073,
-    "y": 108.57965702317057,
-    "z": 4000,
-    "height": 126.67626652703234,
-    "width": 323.92931011912555,
-    "tabOrder": 7000
+    "x": 667.76489069249908,
+    "y": 104.96033512239822,
+    "z": 6000,
+    "height": 142.96321508050792,
+    "width": 351.07422437491817,
+    "tabOrder": 6000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -23,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Total a receber Atrasados"
+                  "Property": "crd_Total Recebido"
                 }
               },
-              "queryRef": "Medidas.Total a receber Atrasados",
-              "nativeQueryRef": "Total a receber Atrasados"
+              "queryRef": "Medidas.crd_Total Recebido",
+              "nativeQueryRef": "crd_Total Recebido"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Total a receber Atrasados"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

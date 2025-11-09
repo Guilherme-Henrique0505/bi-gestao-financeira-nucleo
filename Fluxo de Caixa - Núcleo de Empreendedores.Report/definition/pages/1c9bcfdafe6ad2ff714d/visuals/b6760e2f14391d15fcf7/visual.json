@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "b4f0749bc673109cdbac",
+  "name": "b6760e2f14391d15fcf7",
   "position": {
-    "x": 10.857965702317058,
-    "y": 124.86660557664617,
-    "z": 2000,
-    "height": 103.15067417201205,
-    "width": 313.07134441680847,
-    "tabOrder": 5000
+    "x": 667.76489069249908,
+    "y": 104.96033512239822,
+    "z": 7002,
+    "height": 142.96321508050792,
+    "width": 351.07422437491817,
+    "tabOrder": 7002
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -23,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Saldo Atual"
+                  "Property": "crd_Total Pago"
                 }
               },
-              "queryRef": "Medidas.Saldo Atual",
-              "nativeQueryRef": "Saldo Atual"
+              "queryRef": "Medidas.crd_Total Pago",
+              "nativeQueryRef": "crd_Total Pago"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Saldo Atual"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

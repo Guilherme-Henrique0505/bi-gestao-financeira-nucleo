@@ -1,18 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "4f57a134edd611151956",
+  "name": "2ab5a128929a73d6fd57",
   "position": {
-    "x": 993.50386176201073,
-    "y": 123.05694462625998,
-    "z": 5000,
-    "height": 103.15067417201205,
-    "width": 329.35829297028408
+    "x": 997.123183662783,
+    "y": 104.96033512239822,
+    "z": 7004,
+    "height": 142.96321508050792,
+    "width": 342.02591962298732,
+    "tabOrder": 7004
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -22,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Total Pago"
+                  "Property": "crd_Total a pagar atrasados"
                 }
               },
-              "queryRef": "Medidas.Total Pago",
-              "nativeQueryRef": "Total Pago"
+              "queryRef": "Medidas.crd_Total a pagar atrasados",
+              "nativeQueryRef": "crd_Total a pagar atrasados"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Total Pago"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

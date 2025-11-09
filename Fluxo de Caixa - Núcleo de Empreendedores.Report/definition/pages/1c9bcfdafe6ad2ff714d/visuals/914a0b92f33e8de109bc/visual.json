@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "7ea18830985fdd27bd88",
+  "name": "914a0b92f33e8de109bc",
   "position": {
-    "x": 342.02591962298732,
-    "y": 114.00863987432911,
-    "z": 1000,
-    "height": 126.67626652703234,
-    "width": 318.500327267967,
-    "tabOrder": 4000
+    "x": 10.857965702317058,
+    "y": 104.96033512239822,
+    "z": 7001,
+    "height": 142.96321508050792,
+    "width": 352.88388532530433,
+    "tabOrder": 7001
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -23,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Total a pagar em Aberto"
+                  "Property": "crd_Total a Pagar"
                 }
               },
-              "queryRef": "Medidas.Total a pagar em Aberto",
-              "nativeQueryRef": "Total a pagar em Aberto"
+              "queryRef": "Medidas.crd_Total a Pagar",
+              "nativeQueryRef": "crd_Total a Pagar"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Total a pagar em Aberto"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

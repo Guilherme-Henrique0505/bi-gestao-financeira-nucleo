@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "c1d5c9d78a682cf18d5b",
+  "name": "fecfd23a2360da06d977",
   "position": {
-    "x": 665.95522974211281,
-    "y": 123.05694462625998,
-    "z": 4000,
-    "height": 103.15067417201205,
-    "width": 316.69066631758085,
-    "tabOrder": 8000
+    "x": 10.857965702317058,
+    "y": 104.96033512239822,
+    "z": 5000,
+    "height": 142.96321508050792,
+    "width": 352.88388532530433,
+    "tabOrder": 5000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -23,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Total Recebido"
+                  "Property": "crd_DisponibilidadeImediata"
                 }
               },
-              "queryRef": "Medidas.Total Recebido",
-              "nativeQueryRef": "Total Recebido"
+              "queryRef": "Medidas.crd_DisponibilidadeImediata",
+              "nativeQueryRef": "crd_DisponibilidadeImediata1"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Total Recebido"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

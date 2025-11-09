@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "ddf0309d787e45708e5b",
+  "name": "c76eaa861c20844ae7b9",
   "position": {
-    "x": 343.83558057337348,
-    "y": 123.05694462625998,
-    "z": 3000,
-    "height": 103.15067417201205,
-    "width": 314.88100536719469,
-    "tabOrder": 7000
+    "x": 997.123183662783,
+    "y": 104.96033512239822,
+    "z": 8000,
+    "height": 142.96321508050792,
+    "width": 342.02591962298732,
+    "tabOrder": 8000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -23,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Saldo Previsto"
+                  "Property": "crd_Total Pago"
                 }
               },
-              "queryRef": "Medidas.Saldo Previsto",
-              "nativeQueryRef": "Saldo Previsto"
+              "queryRef": "Medidas.crd_Total Pago",
+              "nativeQueryRef": "crd_Total Pago"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Saldo Previsto"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

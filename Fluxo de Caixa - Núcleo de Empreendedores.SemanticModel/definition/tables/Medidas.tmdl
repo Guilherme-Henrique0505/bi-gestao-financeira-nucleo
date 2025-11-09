@@ -382,6 +382,880 @@ table Medidas
 		displayFolder: 1. INDICADORES\1.4 Gestão de Riscos\1.4.4 Movimentação sob Riscos
 		lineageTag: aeff9f51-f615-47df-9bfc-2d0e6ddad387
 
+	measure crd_DisponibilidadeImediata = ```
+			
+			VAR titulo = "Disponibilidade Imediata" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z'/>
+			  <path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16'/>
+			  <path d='M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Saldo Atual], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL\2.1 Tela 1\2.1.1 Cards
+		lineageTag: 6f14161e-af5d-4cb1-ba7b-63b0fd4f6b16
+
+	measure 'crd_Total Recebido' = ```
+			
+			VAR titulo = "Total Recebido" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4'/>
+			  <path d='M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Total Recebido], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL\2.1 Tela 1\2.1.1 Cards
+		lineageTag: 621642d3-454d-4144-a0b7-a30a8d4959fb
+
+	measure 'crd_Saldo Previsto' = ```
+			
+			VAR titulo = "Saldo Previsto" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Saldo Previsto], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL\2.1 Tela 1\2.1.1 Cards
+		lineageTag: 374ff859-3831-485b-b948-73536fe5a295
+
+	measure 'crd_Total Pago' = ```
+			
+			VAR titulo = "Total Pago" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4'/>
+			  <path d='M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Total Pago], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL\2.1 Tela 1\2.1.1 Cards
+		lineageTag: 960fcf72-e5cd-4992-b84c-ea69982ea940
+
+	measure 'crd_Total a Receber' = ```
+			
+			VAR titulo = "Total a Receber" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z'/>
+			  <path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16'/>
+			  <path d='M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Total a Receber], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL\2.2 Tela 2\2.2.1 Cards
+		lineageTag: 4d86e968-bb2b-49c7-a249-62f02aa92cb3
+
+		changedProperty = IsHidden
+
+	measure 'crd_Total a receber em Aberto' = ```
+			
+			VAR titulo = "Total a receber em Aberto" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Total a receber em Aberto], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL\2.2 Tela 2\2.2.1 Cards
+		lineageTag: 1e844f4b-1335-4494-ad8e-45211e41c29d
+
+		changedProperty = IsHidden
+
+	measure 'crd_Total a receber atrasados' = ```
+			
+			VAR titulo = "Total a receber atrasados" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Total a receber atrasados], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL\2.2 Tela 2\2.2.1 Cards
+		lineageTag: 6b6026c5-cd99-485c-9746-aeb966e34ea0
+
+		changedProperty = IsHidden
+
+	measure 'crd_Total a Pagar' = ```
+			
+			VAR titulo = "Total a Pagar" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z'/>
+			  <path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16'/>
+			  <path d='M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Total a Pagar], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL
+		lineageTag: a1be541a-239f-46c5-b5d6-9ce1fc507863
+
+	measure 'crd_Total a pagar em Aberto' = ```
+			
+			VAR titulo = "Total a pagar em Aberto" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Total a pagar em Aberto], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL
+		lineageTag: fe143e5f-99c3-4efe-8c32-780488638be4
+
+	measure 'crd_Total a pagar atrasados' = ```
+			
+			VAR titulo = "Total a pagar atrasados" 
+			VAR cor_primaria = "#389EB3"
+			VAR cor_secundaria = "black"
+			VAR cor_neutra = "#E4E4E4"
+			VAR icone = "<svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 16 16'>
+			  <path d='M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z'/>
+			</svg>"
+			VAR valor = "R$ " & FORMAT([Total a pagar atrasados], "#,#.00")
+			RETURN
+			"<html lang='pt-br'>
+			<head>
+			  <meta charset='UTF-8'>
+			  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+			  <style>
+			    .card {
+			      width: 320px;
+			      height: 130px;
+			      background-color: " & cor_neutra & ";
+			      border-radius: 10px;
+			      display: flex;
+			      flex-direction: column;
+			      align-items: center;
+			      justify-content: center;
+			      position: relative;
+			      transition: all 0.3s ease-in-out;
+			      cursor: pointer;
+			    }
+			    .title {
+			      font-size: 15px;
+			      font-weight: bold;
+			      color: " & cor_secundaria & ";
+			      position: absolute;
+			      top: 5px;
+			      transition: color 0.3s ease;
+			    }
+			    .icon {
+			      margin-top:7%;
+			      margin-bottom: 2%;
+			      width: 35px;
+			      fill: " & cor_secundaria & ";
+			      height: 35px;
+			      transition: fill 0.3s ease;
+			    }
+			    .value {
+			      font-size: 20px;
+			      color: " & cor_secundaria & ";
+			      font-weight: bold;
+			      transition: color 0.3s ease;
+			    }
+			    
+			    .card:hover {
+			      transform: scale(1.05);
+			      background-color: " & cor_primaria & ";
+			    }
+			    .card:hover .value {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .title {
+			      color: " & cor_neutra & ";
+			    }
+			    .card:hover .icon path {
+			      fill: " & cor_neutra & ";
+			    }
+			  </style>
+			</head>
+			<body>
+			  <div class='card'>
+			    <div class='title'>
+			      " & titulo & "
+			    </div>
+			    <div class='icon'>
+			      " & icone & "
+			    </div>
+			    <div class='value'>
+			      " & valor & "
+			    </div>
+			  </div>
+			</body>
+			</html>"
+			
+			```
+		displayFolder: 2. VISUAL
+		lineageTag: dabadab7-8f10-4731-a378-89065e39fc2e
+
 	column Medidas
 		dataType: string
 		isHidden

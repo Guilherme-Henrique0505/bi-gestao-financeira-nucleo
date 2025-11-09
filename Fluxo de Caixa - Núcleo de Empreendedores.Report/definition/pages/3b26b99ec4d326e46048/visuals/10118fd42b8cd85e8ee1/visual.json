@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "c88c4c3a0d6c618fe3f8",
+  "name": "10118fd42b8cd85e8ee1",
   "position": {
-    "x": 12.667626652703234,
-    "y": 108.57965702317057,
-    "z": 0,
-    "height": 126.67626652703234,
-    "width": 314.88100536719469,
-    "tabOrder": 3000
+    "x": 340.2162586726011,
+    "y": 104.96033512239822,
+    "z": 7000,
+    "height": 142.96321508050792,
+    "width": 352.88388532530433,
+    "tabOrder": 7000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -23,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Total a Receber"
+                  "Property": "crd_Saldo Previsto"
                 }
               },
-              "queryRef": "Medidas.Entradas Previstas",
-              "nativeQueryRef": "Total a Receber"
+              "queryRef": "Medidas.crd_Saldo Previsto",
+              "nativeQueryRef": "crd_Saldo Previsto"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Total a Receber"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

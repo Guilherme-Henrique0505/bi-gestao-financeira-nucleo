@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "dbef55fb84fbb38d8e96",
+  "name": "cbef6b17536cd115bb9f",
   "position": {
-    "x": 342.02591962298732,
-    "y": 108.57965702317057,
-    "z": 1000,
-    "height": 126.67626652703234,
-    "width": 311.26168346642231,
-    "tabOrder": 4000
+    "x": 340.2162586726011,
+    "y": 104.96033512239822,
+    "z": 7003,
+    "height": 142.96321508050792,
+    "width": 352.88388532530433,
+    "tabOrder": 7003
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -23,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Total a receber em Aberto"
+                  "Property": "crd_Total a receber em Aberto"
                 }
               },
-              "queryRef": "Medidas.Total a receber em Aberto",
-              "nativeQueryRef": "Total a receber em Aberto"
+              "queryRef": "Medidas.crd_Total a receber em Aberto",
+              "nativeQueryRef": "crd_Total a receber em Aberto"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Total a receber em Aberto"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {

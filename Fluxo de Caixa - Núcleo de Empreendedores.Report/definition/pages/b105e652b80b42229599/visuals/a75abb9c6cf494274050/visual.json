@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "18c8894ed0a762b3edcb",
+  "name": "a75abb9c6cf494274050",
   "position": {
-    "x": 989.88453986123841,
-    "y": 114.00863987432911,
-    "z": 4000,
-    "height": 126.67626652703234,
-    "width": 323.92931011912555,
-    "tabOrder": 7000
+    "x": 667.76489069249908,
+    "y": 104.96033512239822,
+    "z": 7002,
+    "height": 142.96321508050792,
+    "width": 351.07422437491817,
+    "tabOrder": 7002
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
     "query": {
       "queryState": {
-        "Values": {
+        "content": {
           "projections": [
             {
               "field": {
@@ -23,32 +23,14 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Total a pagar Atrasados"
+                  "Property": "crd_Total Recebido"
                 }
               },
-              "queryRef": "Medidas.Total a pagar Atrasados",
-              "nativeQueryRef": "Total a pagar Atrasados"
+              "queryRef": "Medidas.crd_Total Recebido",
+              "nativeQueryRef": "crd_Total Recebido"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Total a pagar Atrasados"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "visualContainerObjects": {
