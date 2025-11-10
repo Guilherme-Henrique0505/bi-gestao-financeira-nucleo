@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["f_Pagar","f_Receber","f_Pagamentos","f_Recebimentos","d_Calendario","f_Balancete_Geral","f_Agregados_Gerais","Medidas"]
+annotation PBI_QueryOrder = ["f_Pagar","f_Receber","f_Pagamentos","f_Recebimentos","d_Calendario","f_Balancete_Geral","f_Agregados_Gerais","Medidas","f_Ultima_Atualização"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -37,6 +37,7 @@ ref table f_Agregados_Gerais
 ref table 'aux_Atraso de Receita'
 ref table 'aux_Risco Inadimplência'
 ref table 'aux_Aumento despesas'
+ref table f_Ultima_Atualização
 
 ref cultureInfo pt-BR
 
