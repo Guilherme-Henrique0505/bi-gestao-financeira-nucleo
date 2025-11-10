@@ -55,6 +55,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "textFilter25A4896A83E0487089E2B90C9AE57C8A"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -104,6 +107,46 @@
         {
           "name": "BI_Gest_o_Financeira_-_Home22207525717927168.png",
           "path": "BI_Gest_o_Financeira_-_Home22207525717927168.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filter_17967890897637551.png",
+          "path": "Filter_17967890897637551.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filter_10006139844805012062.png",
+          "path": "Filter_10006139844805012062.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filter_2_(1)8888748571138758.png",
+          "path": "Filter_2_(1)8888748571138758.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filter_2_(1)39077434343789286.png",
+          "path": "Filter_2_(1)39077434343789286.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filter_Menu_(2)47629356779742227.png",
+          "path": "Filter_Menu_(2)47629356779742227.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filter_24509382920158239.png",
+          "path": "Filter_24509382920158239.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filter_16009529526041224.png",
+          "path": "Filter_16009529526041224.png",
+          "type": "Image"
+        },
+        {
+          "name": "Filter_139124584266593.png",
+          "path": "Filter_139124584266593.png",
           "type": "Image"
         }
       ]

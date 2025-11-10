@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "d3d1d5e44f4cdd4cedf8",
+      "displayName": "Disponibilidade Imediata",
+      "children": [
+        "8c2fc880248deda606bc",
+        "bd70753de91650b3d98e"
+      ]
+    },
+    {
+      "name": "b7453ceb4a6126897b4f",
+      "displayName": "Entradas Previstas",
+      "children": [
+        "1b425b9814b996c838fd",
+        "3b4d45015f5877dde71f"
+      ]
+    },
+    {
+      "name": "0983b8062e7f60d99a2d",
+      "displayName": "Saídas Previstas",
+      "children": [
+        "996859d0d22da56ecc34",
+        "03f44b1596bcd7df657b"
+      ]
+    }
+  ]
+}
