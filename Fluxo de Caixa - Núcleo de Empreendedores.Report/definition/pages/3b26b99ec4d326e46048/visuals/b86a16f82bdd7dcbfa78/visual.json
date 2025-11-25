@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "b86a16f82bdd7dcbfa78",
   "position": {
     "x": 998,
@@ -7,7 +7,7 @@
     "z": 14000,
     "height": 946,
     "width": 922,
-    "tabOrder": 13006
+    "tabOrder": 14000
   },
   "visualGroup": {
     "displayName": "Menu de Filtros",
